@@ -1,0 +1,9 @@
+
+.live-field {
+    position: relative;
+    display: grid;
+    gap: 1px;
+    padding: 1px;
+    width: fit-content;
+    background-color: #333333;
+}
