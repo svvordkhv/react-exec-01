@@ -13,7 +13,7 @@
     "build-storybook": "storybook build",
     "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix ./",
     "test": "jest",
-    "check": "npm run lint && npm test"
+    "check": "npm run lint && npm run test"
   },
   "husky": {
     "hooks": {
