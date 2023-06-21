@@ -1,27 +1,6 @@
 
-
-//import React from 'react';
-//import { render, screen } from '@testing-library/react';
-
 import { Live } from '../app/Live';
 import { CellState } from "../types/cell-state";
-
-/*
-describe('true is truthy', () => {
-	it('true is truthy', () => {
-		expect(true).toBe(true);
-	});
-});
-*/
-
-/*
-describe('Live', () => {
-  it('Live ', async () => {
-    //const { container } = await render(<Counter />);
-    //expect(screen.getByText('Counter button')).toBeInTheDocument();
-  });
-});
-*/
 
 describe('Live', () => {
 	it('Live weight 1', () => {
