@@ -1,13 +1,13 @@
 
-import  React, { useEffect, useRef, useState } from "react";
+import React, {FC, useEffect, useRef, useState} from "react";
 import { Live } from "../../app/Live";
 import LiveCell from "../LiveCell/LiveCell";
 
 import "./LiveField.css";
 
 interface FieldProps {
-  width?: number;
-  height?: number;
+  width: number;
+  height: number;
   status: string;
 }
 

@@ -1,6 +1,8 @@
 
 import React, {useState} from "react";
-import LiveField from "./components/LiveField/LiveField";
+import LiveField from "../LiveField/LiveField";
+
+import "./App.css";
 
 const App = () => {
     const [status, setStatus] = useState("stop");
@@ -19,7 +21,7 @@ const App = () => {
             <h3>Status: {status}</h3>
         </div>
         <LiveField height={10} width={20} status={status} />
-        <div>
+        <div className={'buttons'}>
             <button onClick={startLive}>Start</button>
             <button onClick={stopLive}>Stop</button>
         </div>
