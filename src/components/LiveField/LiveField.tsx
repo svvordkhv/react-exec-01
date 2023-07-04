@@ -1,5 +1,7 @@
 
 import React, {FC, useEffect, useRef, useState} from "react";
+import { FieldState } from "../../types/field-state";
+import { CellState } from "../../types/cell-state";
 import { Live } from "../../app/Live";
 import LiveCell from "../LiveCell/LiveCell";
 
@@ -8,18 +10,18 @@ import "./LiveField.css";
 interface FieldProps {
   width: number;
   height: number;
-  status: string;
+  status: FieldState;
 }
 
-const LiveField: FC<FieldProps> = ({width = 20, height = 10, status = "stop"}) => {
+const LiveField: FC<FieldProps> = ({width = 20, height = 10, status = FieldState.STOP}) => {
     const [liveCore, setLiveCore] = useState(new Live(width, height));
-    const [liveField, setLiveField] = useState<boolean[][]>([]);
+    const [liveField, setLiveField] = useState<CellState[][]>([]);
     const [liveWidth, setliveWidth] = useState(width);
 
     const timerRef = useRef<NodeJS.Timer>();
 
     useEffect(() => {
-        if (status === "start") {
+        if (status === FieldState.START) {
             timerRef.current = setInterval(() => {
                 liveCore.nextGeneration();
                 setLiveField(liveCore.getField());
