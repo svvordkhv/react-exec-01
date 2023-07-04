@@ -14,7 +14,7 @@
     "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix ./",
     "test": "jest",
     "check": "npm run lint && npm run test",
-    "chromatic": "chromatic --exit-zero-on-changes"
+    "chromatic": "chromatic --exit-zero-on-changes --force-rebuild"
   },
   "husky": {
     "hooks": {
