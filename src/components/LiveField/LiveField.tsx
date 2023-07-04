@@ -33,10 +33,8 @@ const LiveField: FC<FieldProps> = ({width = 20, height = 10, status = FieldState
     }, [status]);
 
     useEffect(() => {
-        if (liveCore.getWidth() !== liveWidth) {
-            setliveWidth(width);
-        }
         if (liveCore.getWidth() !== width || liveCore.getHeight() !== height) {
+            setliveWidth(width);
             setLiveCore(new Live(width, height));
         }
     }, [height, width]);

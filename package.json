@@ -9,11 +9,12 @@
   "scripts": {
     "start": "webpack serve  --hot --open",
     "build": "webpack --config webpack.config.js --mode development",
-    "storybook": "storybook dev -p 6006",
+    "sb": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix ./",
     "test": "jest",
-    "check": "npm run lint && npm run test"
+    "check": "npm run lint && npm run test",
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "husky": {
     "hooks": {
@@ -45,6 +46,7 @@
     "@typescript-eslint/eslint-plugin": "^5.59.11",
     "@typescript-eslint/parser": "^5.59.11",
     "babel-loader": "^9.1.2",
+    "chromatic": "^6.19.9",
     "css-loader": "^6.8.1",
     "eslint": "^8.43.0",
     "eslint-plugin-react": "^7.32.2",
@@ -63,5 +65,7 @@
     "webpack": "^5.84.1",
     "webpack-cli": "^5.1.1",
     "webpack-dev-server": "^4.15.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "execute02@1.0.0"
 }
